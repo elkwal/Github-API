@@ -7,3 +7,8 @@ import { Response, Http } from '@angular/http';
   templateUrl: './github.component.html',
   styleUrls: ['./github.component.css']
 })
+export class GithubComponent implements OnInit {
+  title = 'Github search';
+  Person = 'https://api.github.com/users/'
+  access = "?access_token=508db2cd8608292e114322ba6cd8d3461e611821"
+  persons = [];
