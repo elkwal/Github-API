@@ -12,3 +12,8 @@ export class GithubComponent implements OnInit {
   Person = 'https://api.github.com/users/'
   access = "?access_token=508db2cd8608292e114322ba6cd8d3461e611821"
   persons = [];
+  constructor(private http: Http) { }
+  searchUsers(search: HTMLInputElement) {
+    let fullLink = this.Person + search.value;
+    this.http.get(fullLink).subscribe((res: Response) => {
+      this.persons = res.json();
