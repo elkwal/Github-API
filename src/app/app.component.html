@@ -2,3 +2,6 @@
   <h1>Github Search</h1>
   <div class="form-group">
     <label for="search">Github UserName</label>
+    <input type="text" #search required class="form-control">
+  </div>
+  <button type="submit" (click)="searchUsers(search)" class="btn btn-dark btn-lg">Search</button>
